@@ -1,17 +1,6 @@
 'use client';
 
-import { Metadata } from 'next';
 import { useState } from 'react';
-
-// Note: In a real implementation, you'd handle this metadata differently for client components
-// For now, I'll add it as a comment that you can move to a server component wrapper if needed
-
-/*
-export const metadata: Metadata = {
-  title: 'Contact - Vijay Paderthi',
-  description: 'Get in touch with author Vijay Paderthi. Whether you have questions about my books, want to discuss collaboration opportunities, or just want to say hello.',
-};
-*/
 
 interface FormData {
   name: string;
