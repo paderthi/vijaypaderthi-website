@@ -154,26 +154,47 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[1, 2].map((post) => (
-              <article key={post} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
-                <div className="space-y-4">
-                  <div className="aspect-video bg-gray-200 rounded-lg"></div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      The Art of Storytelling in Modern Literature
-                    </h3>
-                    <p className="text-gray-600">
-                      Exploring how contemporary writers are reshaping narrative techniques to connect with today's readers...
-                    </p>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <time>December 15, 2024</time>
-                      <span className="mx-2">•</span>
-                      <span>5 min read</span>
-                    </div>
+            <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="space-y-4">
+                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                  Featured Article
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Crafting Psychological Suspense: The Art of Mental Tension
+                  </h3>
+                  <p className="text-gray-600">
+                    What makes a psychological thriller truly gripping? It's not just what happens, but how characters react when their reality starts to unravel...
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <time>January 15, 2024</time>
+                    <span className="mx-2">•</span>
+                    <span>8 min read</span>
                   </div>
                 </div>
-              </article>
-            ))}
+              </div>
+            </article>
+            
+            <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="space-y-4">
+                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                  Featured Article
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    From Software Engineer to Author: My Unexpected Writing Journey
+                  </h3>
+                  <p className="text-gray-600">
+                    How a career in tech led me to discover storytelling. From debugging code to debugging plot holes - the similarities might surprise you...
+                  </p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <time>January 8, 2024</time>
+                    <span className="mx-2">•</span>
+                    <span>6 min read</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
           <div className="text-center mt-12">
             <Link

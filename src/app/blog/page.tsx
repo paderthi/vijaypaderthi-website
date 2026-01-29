@@ -24,81 +24,81 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'The Art of Character Development: Breathing Life into Fiction',
-    excerpt: 'Creating compelling characters is perhaps the most crucial skill a writer can develop. Here\'s how I approach building characters that feel real and relatable.',
+    title: 'Crafting Psychological Suspense: The Art of Mental Tension',
+    excerpt: 'What makes a psychological thriller truly gripping? It\'s not just what happens, but how characters react when their reality starts to unravel. Here\'s how I build that crucial psychological tension.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2024-01-15',
     readTime: '8 min read',
     category: 'Writing Craft',
-    tags: ['character development', 'fiction writing', 'storytelling'],
+    tags: ['psychological thriller', 'suspense', 'character psychology'],
     featured: true,
-    imageUrl: '/blog/character-development.jpg'
+    imageUrl: '/blog/psychological-suspense.jpg'
   },
   {
     id: '2',
-    title: 'Finding Your Voice as a Writer: A Personal Journey',
-    excerpt: 'Every writer\'s journey to finding their unique voice is different. I share my own path and the lessons learned along the way.',
+    title: 'From Software Engineer to Author: My Unexpected Writing Journey',
+    excerpt: 'How a career in tech led me to discover storytelling. From debugging code to debugging plot holes - the similarities might surprise you.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2024-01-08',
     readTime: '6 min read',
     category: 'Writing Journey',
-    tags: ['writing voice', 'personal growth', 'author journey'],
+    tags: ['career change', 'software engineering', 'author journey'],
     featured: true,
-    imageUrl: '/blog/finding-voice.jpg'
+    imageUrl: '/blog/tech-to-writing.jpg'
   },
   {
     id: '3',
-    title: 'The Power of Place: How Setting Shapes Story',
-    excerpt: 'Setting is more than just backdrop—it\'s a character in its own right. Discover how to make your story locations come alive.',
+    title: 'Writing Indian Settings for Global Readers',
+    excerpt: 'How do you capture the essence of Indian culture and settings while making the story accessible to readers worldwide? It\'s about finding universal truths in specific places.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2024-01-02',
     readTime: '5 min read',
     category: 'Writing Craft',
-    tags: ['setting', 'worldbuilding', 'atmosphere'],
+    tags: ['indian settings', 'cultural writing', 'authenticity'],
     featured: false,
-    imageUrl: '/blog/power-of-place.jpg'
+    imageUrl: '/blog/indian-settings.jpg'
   },
   {
     id: '4',
-    title: 'Overcoming Writer\'s Block: Practical Strategies That Work',
-    excerpt: 'Writer\'s block affects every author at some point. Here are proven techniques to break through creative barriers and get back to writing.',
+    title: 'The Mystery of Motivation: What Drives Characters to Act',
+    excerpt: 'In murder mysteries and thrillers, character motivation is everything. A killer\'s reason must feel both shocking and inevitable. Here\'s how I approach the psychology behind the crime.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2023-12-28',
     readTime: '7 min read',
     category: 'Writing Tips',
-    tags: ['writers block', 'creativity', 'productivity'],
+    tags: ['character motivation', 'murder mystery', 'plot development'],
     featured: false,
-    imageUrl: '/blog/writers-block.jpg'
+    imageUrl: '/blog/character-motivation.jpg'
   },
   {
     id: '5',
-    title: 'The Reading Life: Books That Shaped My Writing',
-    excerpt: 'A look at the novels and authors that have influenced my work and continue to inspire my storytelling approach.',
+    title: 'Telugu Literature That Shaped My Storytelling',
+    excerpt: 'Growing up reading Telugu classics gave me a deep appreciation for narrative structure and character depth. Here are the works that continue to influence my writing today.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2023-12-20',
     readTime: '9 min read',
     category: 'Book Reviews',
-    tags: ['influences', 'book recommendations', 'literary analysis'],
+    tags: ['telugu literature', 'influences', 'cultural heritage'],
     featured: false,
-    imageUrl: '/blog/reading-life.jpg'
+    imageUrl: '/blog/telugu-literature.jpg'
   },
   {
     id: '6',
-    title: 'Behind the Scenes: Writing \'Echoes of Tomorrow\'',
-    excerpt: 'Take a peek behind the curtain as I share the inspiration, research, and writing process that brought my latest novel to life.',
+    title: 'Behind the Scenes: Writing \'The Girl With Bleeding Teeth\'',
+    excerpt: 'The story behind my psychological thriller about a village\'s collective silence. How a disturbing news story became the seed for exploring shared guilt and suppressed memory.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2023-12-15',
     readTime: '10 min read',
     category: 'Behind the Book',
-    tags: ['echoes of tomorrow', 'writing process', 'inspiration'],
+    tags: ['bleeding teeth', 'writing process', 'inspiration'],
     featured: false,
-    imageUrl: '/blog/behind-scenes.jpg'
+    imageUrl: '/blog/bleeding-teeth-behind.jpg'
   }
 ];
 
