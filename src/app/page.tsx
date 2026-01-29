@@ -157,17 +157,19 @@ export default function Home() {
             <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
               <div className="space-y-4">
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                  Featured Article
+                  IMDB Featured Review
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
-                    Crafting Psychological Suspense: The Art of Mental Tension
+                    My Baahubali 2 Review: One of IMDB's Most Regarded Analyses
                   </h3>
                   <p className="text-gray-600">
-                    What makes a psychological thriller truly gripping? It's not just what happens, but how characters react when their reality starts to unravel...
+                    My in-depth review of Baahubali 2 became one of the most highly regarded reviews on IMDB. Here's what made this epic so compelling...
                   </p>
                   <div className="flex items-center text-sm text-gray-500">
-                    <time>January 15, 2024</time>
+                    <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs font-medium">
+                      IMDB Featured
+                    </span>
                     <span className="mx-2">•</span>
                     <span>8 min read</span>
                   </div>
@@ -178,19 +180,21 @@ export default function Home() {
             <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
               <div className="space-y-4">
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                  Featured Article
+                  Award-Winning Story
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
-                    From Software Engineer to Author: My Unexpected Writing Journey
+                    Mysterious Friend: Editor's Choice Award Winner
                   </h3>
                   <p className="text-gray-600">
-                    How a career in tech led me to discover storytelling. From debugging code to debugging plot holes - the similarities might surprise you...
+                    My short story "Mysterious Friend" won the Editor's Choice Award on StoryClub. A psychological thriller about unexpected encounters...
                   </p>
                   <div className="flex items-center text-sm text-gray-500">
-                    <time>January 8, 2024</time>
+                    <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                      Editor's Choice
+                    </span>
                     <span className="mx-2">•</span>
-                    <span>6 min read</span>
+                    <span>5 min read</span>
                   </div>
                 </div>
               </div>
