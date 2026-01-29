@@ -13,13 +13,13 @@ export default function Home() {
         type="person"
         data={{
           name: "Vijay Paderthi",
-          description: "Author, storyteller, and creative writer passionate about exploring the human experience through words.",
+          description: "Software engineer and author who writes fiction inspired by Indian settings. His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.",
           socialLinks: [
             "https://twitter.com/vijaypaderthi",
             "https://linkedin.com/in/vijaypaderthi",
             "https://goodreads.com/author/vijaypaderthi"
           ],
-          awards: ["Finalist - 2023 Indie Book Awards", "Winner - 2022 Regional Literary Award"]
+          awards: []
         }}
       />
       <div className="min-h-screen">
@@ -34,8 +34,8 @@ export default function Home() {
                   <span className="text-blue-600 block">Literary World</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  I'm Vijay Paderthi, an author passionate about crafting stories that resonate with the human experience.
-                  Join me on a journey through imagination, emotion, and discovery.
+                  Paderthi Vijay is a software engineer and author who writes fiction inspired by Indian settings.
+                  His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -54,15 +54,18 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl flex items-center justify-center">
-                <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-600">
-                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
+              <div className="aspect-square bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl overflow-hidden">
+                <Image
+                  src="/vijay-paderthi.jpg"
+                  alt="Vijay Paderthi - Author & Software Engineer"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4">
-                <p className="text-sm font-medium text-gray-900">"Words have the power to change worlds."</p>
+                <p className="text-sm font-medium text-gray-900">"Stories inspired by Indian settings."</p>
               </div>
             </div>
           </div>

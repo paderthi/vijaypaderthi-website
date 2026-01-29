@@ -15,23 +15,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vijay Paderthi - Author & Storyteller",
-  description: "Welcome to the official website of author Vijay Paderthi. Discover books, stories, and insights from a passionate storyteller.",
-  keywords: ["Vijay Paderthi", "author", "books", "storyteller", "writer", "literature"],
+  title: "Vijay Paderthi - Author & Software Engineer",
+  description: "Software engineer and author who writes fiction inspired by Indian settings. His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.",
+  keywords: ["Vijay Paderthi", "author", "software engineer", "fiction", "Indian settings", "thrillers", "mysteries", "books", "writer", "literature"],
   authors: [{ name: "Vijay Paderthi" }],
   creator: "Vijay Paderthi",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://vijaypaderthi.com",
-    title: "Vijay Paderthi - Author & Storyteller",
-    description: "Welcome to the official website of author Vijay Paderthi. Discover books, stories, and insights from a passionate storyteller.",
+    title: "Vijay Paderthi - Author & Software Engineer",
+    description: "Software engineer and author who writes fiction inspired by Indian settings. His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.",
     siteName: "Vijay Paderthi",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vijay Paderthi - Author & Storyteller",
-    description: "Welcome to the official website of author Vijay Paderthi. Discover books, stories, and insights from a passionate storyteller.",
+    title: "Vijay Paderthi - Author & Software Engineer",
+    description: "Software engineer and author who writes fiction inspired by Indian settings. His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.",
   },
 };
 
