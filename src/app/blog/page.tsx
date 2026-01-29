@@ -132,9 +132,16 @@ export default function BlogPage() {
               {featuredPosts.map((post) => (
                 <article key={post.id} className="group cursor-pointer">
                   <div className="space-y-4">
-                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden group-hover:opacity-90 transition-opacity">
-                      <div className="w-full h-full flex items-center justify-center text-gray-500">
-                        Featured Article Image
+                    <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg overflow-hidden group-hover:opacity-90 transition-opacity flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-4xl mb-2">
+                          {post.category === 'Movie Reviews' ? '🎬' :
+                           post.category === 'Technology' ? '💻' :
+                           post.category === 'Short Stories' ? '📖' :
+                           post.category === 'Personal Experiences' ? '✈️' :
+                           post.category === 'Career Journey' ? '💼' : '📝'}
+                        </div>
+                        <div className="text-sm font-medium text-gray-700">{post.category}</div>
                       </div>
                     </div>
                     <div className="space-y-3">
@@ -204,9 +211,16 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recentPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow group">
-                <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-gray-500 text-sm">
-                    Article Image
+                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-3xl mb-2">
+                      {post.category === 'Movie Reviews' ? '🎬' :
+                       post.category === 'Technology' ? '💻' :
+                       post.category === 'Short Stories' ? '📖' :
+                       post.category === 'Personal Experiences' ? '✈️' :
+                       post.category === 'Career Journey' ? '💼' : '📝'}
+                    </div>
+                    <div className="text-xs font-medium text-gray-600">{post.category}</div>
                   </div>
                 </div>
                 <div className="p-6 space-y-4">
@@ -473,23 +487,23 @@ export default function BlogPage() {
               <div className="text-center space-y-2">
                 <h3 className="text-lg font-semibold text-gray-900">Movie Reviews</h3>
                 <p className="text-gray-600 text-sm">In-depth film analysis and cinematic insights</p>
-                <Link href="/blog/category/movie-reviews" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                  View Reviews →
-                </Link>
+                <a href="https://paderthimovies.blogspot.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                  Visit Movie Blog →
+                </a>
               </div>
               <div className="text-center space-y-2">
                 <h3 className="text-lg font-semibold text-gray-900">Short Stories</h3>
                 <p className="text-gray-600 text-sm">Award-winning fiction and psychological thrillers</p>
-                <Link href="/blog/category/short-stories" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                <a href="https://paderthistories.blogspot.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
                   Read Stories →
-                </Link>
+                </a>
               </div>
               <div className="text-center space-y-2">
                 <h3 className="text-lg font-semibold text-gray-900">Personal Journey</h3>
                 <p className="text-gray-600 text-sm">Real experiences and career reflections</p>
-                <Link href="/blog/category/personal-experiences" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                <a href="https://paderthi.blogspot.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
                   Read Experiences →
-                </Link>
+                </a>
               </div>
             </div>
           </div>

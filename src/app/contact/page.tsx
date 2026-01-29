@@ -303,31 +303,27 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900">Do you accept manuscript reviews?</h3>
+              <h3 className="font-semibold text-gray-900">What inspired you to write psychological thrillers?</h3>
               <p className="text-gray-600 text-sm">
-                While I'm honored by the request, I'm currently unable to review unpublished manuscripts due to time constraints. 
-                I recommend joining a local writers' group or online community for feedback.
+                Growing up reading Telugu literature and later discovering psychological suspense, I became fascinated by the complexity of human behavior. My background in software engineering also gives me a unique perspective on how systematic thinking can be applied to plot construction and character development.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900">Are you available for speaking events?</h3>
+              <h3 className="font-semibold text-gray-900">How do you balance your tech career with writing?</h3>
               <p className="text-gray-600 text-sm">
-                Yes! I love speaking at book clubs, libraries, and literary events. Please reach out with details about 
-                your event, and I'll do my best to accommodate.
+                It's challenging but rewarding! I write early mornings and weekends. My software engineering background actually helps with discipline and structured thinking. The analytical skills I use in coding translate well to plotting mysteries and building suspense.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900">Can you sign my book?</h3>
+              <h3 className="font-semibold text-gray-900">Do you draw from real experiences for your stories?</h3>
               <p className="text-gray-600 text-sm">
-                Absolutely! If you have a physical copy and we can arrange a meeting, I'd be delighted to sign it. 
-                For mailed books, please contact me first to arrange details.
+                Absolutely! My personal blog documents real experiences like my Indian Air Force training and career struggles. These experiences inform my characters' emotional depth. While the thriller plots are fictional, the human emotions and reactions are rooted in authentic experiences.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="font-semibold text-gray-900">Do you offer writing workshops?</h3>
+              <h3 className="font-semibold text-gray-900">What's your approach to movie reviews on IMDB?</h3>
               <p className="text-gray-600 text-sm">
-                I occasionally conduct workshops and masterclasses. Follow my blog or social media for announcements 
-                about upcoming workshops and writing events.
+                I focus on deeper analysis beyond surface-level criticism. My Baahubali 2 review became highly regarded because I examined the cultural significance and narrative structure. I believe in thoughtful, comprehensive reviews that help viewers appreciate both the craft and cultural context.
               </p>
             </div>
           </div>

@@ -34,7 +34,7 @@ export default function Home() {
                   <span className="text-blue-600 block">Literary World</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Paderthi Vijay is a software engineer and author who writes fiction inspired by Indian settings.
+                  Vijay Paderthi is a software engineer and author who writes fiction inspired by Indian settings.
                   His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.
                 </p>
               </div>
@@ -154,10 +154,13 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+            <a href="https://www.imdb.com/title/tt4849438/review/rw3737170/?ref_=ext_shr_lnk" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow block">
               <div className="space-y-4">
-                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                  IMDB Featured Review
+                <div className="aspect-video bg-gradient-to-br from-yellow-100 to-orange-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-3xl mb-2">🎬</div>
+                    <div className="text-sm font-medium text-gray-700">IMDB Featured Review</div>
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
@@ -171,16 +174,19 @@ export default function Home() {
                       IMDB Featured
                     </span>
                     <span className="mx-2">•</span>
-                    <span>8 min read</span>
+                    <span>Click to Read on IMDB</span>
                   </div>
                 </div>
               </div>
-            </article>
+            </a>
             
-            <article className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+            <a href="https://yourstoryclub.com/short-stories-unusual-experience/thriller-short-story-mysterious-friend/index.html" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow block">
               <div className="space-y-4">
-                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                  Award-Winning Story
+                <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-3xl mb-2">🏆</div>
+                    <div className="text-sm font-medium text-gray-700">Award-Winning Story</div>
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
@@ -194,11 +200,11 @@ export default function Home() {
                       Editor's Choice
                     </span>
                     <span className="mx-2">•</span>
-                    <span>5 min read</span>
+                    <span>Click to Read Story</span>
                   </div>
                 </div>
               </div>
-            </article>
+            </a>
           </div>
           <div className="text-center mt-12">
             <Link
