@@ -1,6 +1,9 @@
+'use client';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export const metadata: Metadata = {
   title: 'Blog - Vijay Paderthi',
@@ -105,8 +108,19 @@ const blogPosts: BlogPost[] = [
 const categories = ['All Posts', 'Movie Reviews', 'Technology', 'Short Stories', 'Personal Experiences', 'Career Journey', 'Behind the Book'];
 
 export default function BlogPage() {
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.filter(post => !post.featured);
+  const [selectedCategory, setSelectedCategory] = useState('All Posts');
+  
+  // Filter posts based on selected category
+  const getFilteredPosts = (posts: BlogPost[]) => {
+    if (selectedCategory === 'All Posts') {
+      return posts;
+    }
+    return posts.filter(post => post.category === selectedCategory);
+  };
+  
+  const featuredPosts = getFilteredPosts(blogPosts.filter(post => post.featured));
+  const recentPosts = getFilteredPosts(blogPosts.filter(post => !post.featured));
+  const allFilteredPosts = getFilteredPosts(blogPosts);
 
   return (
     <div className="min-h-screen bg-white">
@@ -191,9 +205,10 @@ export default function BlogPage() {
             {categories.map((category) => (
               <button
                 key={category}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === 'All Posts' 
-                    ? 'bg-blue-600 text-white' 
+                  category === selectedCategory
+                    ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -207,9 +222,56 @@ export default function BlogPage() {
       {/* Recent Posts */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Recent Posts</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recentPosts.map((post) => (
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            {selectedCategory === 'All Posts' ? 'Recent Posts' : `${selectedCategory} Posts`}
+          </h2>
+          {selectedCategory === 'All Posts' && recentPosts.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {recentPosts.map((post) => (
+                <article key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg overflow-hidden flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2">
+                        {post.category === 'Movie Reviews' ? '🎬' :
+                         post.category === 'Technology' ? '💻' :
+                         post.category === 'Short Stories' ? '📖' :
+                         post.category === 'Personal Experiences' ? '✈️' :
+                         post.category === 'Career Journey' ? '💼' : '📝'}
+                      </div>
+                      <div className="text-xs font-medium text-gray-600">{post.category}</div>
+                    </div>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                        {post.category}
+                      </span>
+                      <span>•</span>
+                      <time>{new Date(post.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</time>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="text-blue-600 font-medium hover:text-blue-700 transition-colors text-sm"
+                      >
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+          {selectedCategory !== 'All Posts' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allFilteredPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow group">
                 <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg overflow-hidden flex items-center justify-center">
                   <div className="text-center">
@@ -248,8 +310,22 @@ export default function BlogPage() {
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
+          {allFilteredPosts.length === 0 && selectedCategory !== 'All Posts' && (
+            <div className="text-center py-12">
+              <div className="text-gray-400 text-6xl mb-4">📝</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No posts found</h3>
+              <p className="text-gray-600">No posts available in the "{selectedCategory}" category yet.</p>
+              <button
+                onClick={() => setSelectedCategory('All Posts')}
+                className="mt-4 text-blue-600 hover:text-blue-700 font-medium"
+              >
+                View all posts →
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
