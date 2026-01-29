@@ -82,17 +82,53 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((book) => (
-              <div key={book} className="group cursor-pointer">
-                <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 flex items-center justify-center group-hover:shadow-lg transition-shadow">
-                  <span className="text-gray-500 font-medium">Book Cover {book}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Book Title {book}</h3>
-                <p className="text-gray-600 text-sm line-clamp-3">
-                  A compelling story that explores the depths of human emotion and the power of resilience in the face of adversity.
-                </p>
+            <Link href="/books" className="group cursor-pointer">
+              <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 overflow-hidden group-hover:shadow-lg transition-shadow">
+                <Image
+                  src="/bleeding-teeth-cover.jpeg"
+                  alt="The Girl With Bleeding Teeth book cover"
+                  width={300}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">The Girl With Bleeding Teeth</h3>
+              <p className="text-gray-600 text-sm line-clamp-3">
+                Set in a village bound by tradition and fear, this psychological thriller explores suppressed memory, shared guilt, and the danger of protecting secrets for too long.
+              </p>
+            </Link>
+            
+            <Link href="/books" className="group cursor-pointer">
+              <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 overflow-hidden group-hover:shadow-lg transition-shadow">
+                <Image
+                  src="/corner-room-cover.jpeg"
+                  alt="The Girl in the Corner Room book cover"
+                  width={300}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">The Girl in the Corner Room</h3>
+              <p className="text-gray-600 text-sm line-clamp-3">
+                A grounded murder mystery focused on motive and psychology. What appears straightforward slowly reveals layers of silence, misdirection, and hidden relationships.
+              </p>
+            </Link>
+            
+            <Link href="/books" className="group cursor-pointer">
+              <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 overflow-hidden group-hover:shadow-lg transition-shadow">
+                <Image
+                  src="/someone-else-cover.jpeg"
+                  alt="The Man Who Woke Up as Someone Else book cover"
+                  width={300}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">The Man Who Woke Up as Someone Else</h3>
+              <p className="text-gray-600 text-sm line-clamp-3">
+                A stolen identity thriller exploring what happens when a man wakes up living a life that doesn't belong to him, uncovering a carefully constructed deception.
+              </p>
+            </Link>
           </div>
           <div className="text-center mt-12">
             <Link
