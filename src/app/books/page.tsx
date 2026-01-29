@@ -137,6 +137,171 @@ export default function BooksPage() {
         </div>
       </section>
 
+      {/* Reader Reviews & Testimonials */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">What Readers Are Saying</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Authentic reviews from readers who've experienced the psychological depth and thrilling narratives of these stories.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Short Story Reviews */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-600">Short Story Reader</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "You are such an amazing writer. Crime, science, adventure, thriller everything comes spontaneously to you... I cant say good work or anything... Beyond words... I simply loved it to the most."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Charlie Gal</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-600">Thriller Enthusiast</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "From the starting to the end it was so nice and thrilling to read. Every character was nicely described. I enjoyed reading this story. Expecting another thriller from you!"
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— dilis2</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-600">Story Reader</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "What a clean finish up and completion... awesome thrilling story... I hate to watch thriller movies but loved to read ur story... write and keep writing VJ!"
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— shy</footer>
+              </div>
+            </div>
+
+            {/* The Girl with Bleeding Teeth Reviews */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-orange-600">Amazon Verified Purchase</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "This book gripped me with its unsettling, claustrophobic atmosphere. The village feels alive with fear and superstition... It's about living inside a world that's strange, dangerous, and quietly terrifying. This one stays with you long after you finish."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Layla Strom, Amazon</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-orange-600">Amazon Verified Purchase</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "A haunting, thought-provoking novel that explores fear, superstition, and the devastating cost of collective silence... It's a gripping, emotional read that lingers long after the final page."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— John Torres, Amazon</footer>
+              </div>
+            </div>
+
+            {/* The Girl in the Corner Room Reviews */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-orange-600">Amazon Verified Purchase</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "This story really has you question your own morality. How would you have handled the case?... The inspector holds a moral ground to the highest order. I enjoyed the research that made you feel like you were there."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Kikikat19, Amazon</footer>
+              </div>
+            </div>
+
+            {/* Additional Reviews */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-orange-600">Amazon Verified Purchase</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "Really enjoyed this book. Read it in 2 days. Twists and turns. Kept my interest the whole time."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Kim Summers, Amazon</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-orange-600">Amazon Verified Purchase</span>
+                </div>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "What a great book, well written... The story line I found to be riveting... makes you wonder what is happening. He chose to live a better life."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Mary Bryant, Amazon</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6 flex items-center justify-center">
+              <div className="text-center space-y-4">
+                <div className="text-4xl text-blue-600 font-bold">22+</div>
+                <div className="text-lg font-semibold text-gray-900">Published Stories</div>
+                <div className="text-sm text-gray-600">Including Editor's Choice Award Winner</div>
+                <div className="text-xs text-gray-500 bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                  "Mysterious Friend" - StoryClub Award
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Amazon Author Page CTA */}
       <section className="bg-blue-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
