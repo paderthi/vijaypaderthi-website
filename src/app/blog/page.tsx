@@ -92,16 +92,16 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '6',
-    title: 'Behind the Scenes: Writing \'The Girl With Bleeding Teeth\'',
-    excerpt: 'The story behind my psychological thriller about a village\'s collective silence. How a disturbing news story became the seed for exploring shared guilt and suppressed memory.',
+    title: 'Behind the Scenes: The Girl in the Corner Room',
+    excerpt: 'The story behind my psychological thriller originally called "Meghana". How a single character\'s isolation became the foundation for exploring psychological depth and human vulnerability.',
     content: 'Full content would go here...',
     author: 'Vijay Paderthi',
     publishDate: '2023-12-15',
     readTime: '10 min read',
     category: 'Behind the Book',
-    tags: ['bleeding teeth', 'writing process', 'inspiration', 'novel writing'],
+    tags: ['corner room', 'meghana', 'writing process', 'inspiration', 'novel writing'],
     featured: false,
-    imageUrl: '/blog/bleeding-teeth-behind.jpg'
+    imageUrl: '/blog/corner-room-behind.jpg'
   }
 ];
 
