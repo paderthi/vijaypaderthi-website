@@ -82,13 +82,13 @@ export default function BooksPage() {
                 {/* Book Cover */}
                 <div className="flex-shrink-0">
                   <div className="relative group">
-                    <div className="aspect-[3/4] w-64 bg-gray-100 rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow duration-300">
+                    <div className="aspect-[3/4] w-64 rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow duration-300 bg-gray-100">
                       <Image
                         src={book.coverImage}
                         alt={`${book.title} book cover`}
                         width={300}
                         height={400}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain rounded-lg"
                         priority={index === 0}
                       />
                     </div>
