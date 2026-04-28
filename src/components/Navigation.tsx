@@ -11,6 +11,8 @@ const Navigation = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Books', href: '/books' },
+    { name: 'Corner Room Series', href: '/corner-room-series' },
+    { name: 'Reading List', href: '/reading-list' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import StructuredData from "@/components/StructuredData";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export default function Home() {
   return (
@@ -26,19 +27,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 lg:py-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Welcome to My
-                  <span className="text-blue-600 block">Literary World</span>
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Vijay Paderthi is a software engineer and author who writes fiction inspired by Indian settings.
-                  His work includes thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+          <div className="text-center space-y-12">
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Welcome to My
+                <span className="text-blue-600 block">Literary World</span>
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Software engineer and author who writes fiction inspired by Indian settings.
+                Thrillers, mysteries, and character-driven stories shaped by years of reading and storytelling.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/books"
                   className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -46,26 +45,61 @@ export default function Home() {
                   Explore My Books
                 </Link>
                 <Link
-                  href="/about"
+                  href="/reading-list"
                   className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-blue-600 bg-white border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
-                  About Me
+                  Get Free Books
                 </Link>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl overflow-hidden">
-                <Image
-                  src="/vijay-paderthi.jpg"
-                  alt="Vijay Paderthi - Author & Software Engineer"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  priority
-                />
+            
+            {/* Featured New Book Highlight */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  NEW RELEASE
+                </div>
+                <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                  Free copies available
+                </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4">
-                <p className="text-sm font-medium text-gray-900">"Stories inspired by Indian settings."</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="relative mx-auto">
+                  <div className="aspect-[3/4] w-48 rounded-lg shadow-lg overflow-hidden bg-gray-100">
+                    <Image
+                      src="/doctor-corner-clinic-cover.jpg"
+                      alt="The Doctor in the Corner Clinic book cover"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-contain rounded-lg"
+                      priority
+                    />
+                  </div>
+                </div>
+                <div className="text-left space-y-4">
+                  <h2 className="text-3xl font-bold text-gray-900">The Doctor in the Corner Clinic</h2>
+                  <p className="text-lg text-blue-600 italic">"The Room Was Never the Mystery"</p>
+                  <p className="text-gray-700">
+                    Dr. Ashok Kulkarni is found dead inside his locked clinic. Gun in hand. Door bolted from the inside.
+                    The police say suicide. Inspector Praveen Kumar isn't convinced.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://www.amazon.com/gp/product/B0GX141YWT"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors"
+                    >
+                      Buy on Amazon
+                    </a>
+                    <Link
+                      href="/reading-list"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Get Free Copy
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -82,20 +116,28 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/books" className="group cursor-pointer">
+            <Link href="/books" className="group cursor-pointer relative">
+              <div className="absolute -top-2 -right-2 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold z-10 shadow-lg">
+                NEW!
+              </div>
               <div className="aspect-[3/4] rounded-lg mb-4 overflow-hidden group-hover:shadow-lg transition-shadow bg-gray-100">
                 <Image
-                  src="/bleeding-teeth-cover.jpeg"
-                  alt="The Girl With Bleeding Teeth book cover"
+                  src="/doctor-corner-clinic-cover.jpg"
+                  alt="The Doctor in the Corner Clinic book cover"
                   width={300}
                   height={400}
                   className="w-full h-full object-contain rounded-lg"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">The Girl With Bleeding Teeth</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">The Doctor in the Corner Clinic</h3>
               <p className="text-gray-600 text-sm line-clamp-3">
-                Set in a village bound by tradition and fear, this psychological thriller explores suppressed memory, shared guilt, and the danger of protecting secrets for too long.
+                A locked-room mystery in Bangalore. Dr. Ashok Kulkarni is found dead in his clinic, gun in hand. The police say suicide. Inspector Praveen Kumar isn't convinced.
               </p>
+              <div className="mt-2">
+                <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
+                  Free copies available
+                </span>
+              </div>
             </Link>
             
             <Link href="/books" className="group cursor-pointer">
@@ -221,29 +263,9 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">Stay Connected</h2>
-            <p className="text-xl text-blue-100">
-              Get updates on new releases, upcoming events, and exclusive insights into my writing process.
-            </p>
-            <div className="max-w-md mx-auto">
-              <form className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                />
-                <button
-                  type="submit"
-                  className="px-8 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterSignup />
         </div>
       </section>
       </div>

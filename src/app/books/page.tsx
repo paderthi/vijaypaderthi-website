@@ -21,6 +21,17 @@ interface Book {
 
 const books: Book[] = [
   {
+    id: '4',
+    title: 'The Doctor in the Corner Clinic',
+    subtitle: 'The Room Was Never the Mystery',
+    description: 'Dr. Ashok Kulkarni is found dead inside his locked clinic. Gun in hand. Door bolted from the inside. An open-and-shut suicide, the police say. Inspector Praveen Kumar is not convinced. Ashok was a celebrated cardiologist, a Padma Shri recipient, and one of Bangalore\'s most trusted doctors. But as Praveen retraces the final months of his life, he uncovers a burned letter, a growing fear, and a secret powerful enough to destroy more than one life. What begins as a locked-room death soon turns into something far more dangerous: a search through buried relationships, quiet betrayals, and truths hidden behind respectability.',
+    coverImage: '/doctor-corner-clinic-cover.jpg',
+    amazonLink: 'https://www.amazon.com/gp/product/B0GX141YWT',
+    genre: 'Crime Thriller',
+    publishDate: '2025',
+    formats: ['Kindle', 'Paperback']
+  },
+  {
     id: '1',
     title: 'The Girl With Bleeding Teeth',
     subtitle: 'A Village That Burned Its Silence',
@@ -70,6 +81,45 @@ export default function BooksPage() {
         </div>
       </section>
 
+      {/* New Release Banner */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="flex-1 space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="bg-white text-blue-600 px-3 py-1 rounded-full font-bold text-sm">
+                  NEW RELEASE
+                </span>
+                <span className="bg-green-400 text-green-900 px-3 py-1 rounded-full font-bold text-sm">
+                  FREE COPIES AVAILABLE
+                </span>
+              </div>
+              <h2 className="text-2xl lg:text-3xl font-bold">The Doctor in the Corner Clinic</h2>
+              <p className="text-blue-100 text-lg">
+                Book 2 in The Corner Room Series - Get your free copy by emailing{' '}
+                <a href="mailto:hello@vijaypaderthi.com" className="text-green-300 hover:text-green-100 underline font-medium">
+                  hello@vijaypaderthi.com
+                </a>
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="mailto:hello@vijaypaderthi.com"
+                className="inline-flex items-center justify-center px-6 py-3 bg-green-400 text-green-900 font-medium rounded-lg hover:bg-green-300 transition-colors"
+              >
+                Get Free Copy
+              </a>
+              <a
+                href="/corner-room-series"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                View Series
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Books Grid */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,6 +132,11 @@ export default function BooksPage() {
                 {/* Book Cover */}
                 <div className="flex-shrink-0">
                   <div className="relative group">
+                    {index === 0 && (
+                      <div className="absolute -top-4 -right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10 shadow-lg">
+                        NEW!
+                      </div>
+                    )}
                     <div className="aspect-[3/4] w-64 rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow duration-300 bg-gray-100">
                       <Image
                         src={book.coverImage}
@@ -114,6 +169,24 @@ export default function BooksPage() {
                   <p className="text-gray-700 leading-relaxed text-lg">
                     {book.description}
                   </p>
+
+                  {/* Special Free Copy Offer for New Book */}
+                  {index === 0 && (
+                    <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-4">
+                      <h4 className="font-bold text-green-800 mb-2">
+                        Limited Time: Free Copies Available
+                      </h4>
+                      <p className="text-green-700 text-sm mb-3">
+                        Be one of the first 50 readers to get a complimentary copy of this latest thriller.
+                      </p>
+                      <a
+                        href="mailto:hello@vijaypaderthi.com?subject=Free Copy Request - The Doctor in the Corner Clinic"
+                        className="inline-flex items-center text-green-800 hover:text-green-600 font-medium text-sm underline"
+                      >
+                        Email hello@vijaypaderthi.com to claim your free copy
+                      </a>
+                    </div>
+                  )}
 
                   {/* Purchase Links */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -148,6 +221,79 @@ export default function BooksPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* The Doctor in the Corner Clinic Reviews */}
+            <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-blue-600">The Doctor in the Corner Clinic</span>
+                </div>
+                <h4 className="font-semibold text-gray-900">Fantastic</h4>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "I mainly read mystery books. This book was one of my favorites out of the hundreds (seriously) that I have read. It had me engaged from the beginning. The plot was easy to follow and interesting. Although there were side plots, they all related to the main story. There were twists throughout the story that made it surprising throughout the book."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Megan Ngetich</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-blue-600">The Doctor in the Corner Clinic</span>
+                </div>
+                <h4 className="font-semibold text-gray-900">Good mystery</h4>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "The Doctor in the Corner Clinic is a quick, engaging mystery with a strange setup that pulled me in. The clinic atmosphere works well, and the story has enough tension and curiosity to make it an easy, satisfying read for mystery fans."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Jeff W.</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-blue-600">The Doctor in the Corner Clinic</span>
+                </div>
+                <h4 className="font-semibold text-gray-900">Thrilling and Exciting</h4>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "Interesting thriller set in India! A lot of twists and turns that you don't see coming. The descriptions of the people and places make it even more thrilling and provocative. Good read if you're looking for a cross between medicine and fantasy with a little bit of mind bending problems to solve."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Payton</footer>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex text-yellow-400">
+                    {'★★★★★'.split('').map((star, i) => (
+                      <span key={i}>{star}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-blue-600">Corner Room Series</span>
+                </div>
+                <h4 className="font-semibold text-gray-900">Great continuation</h4>
+                <blockquote className="text-gray-700 italic leading-relaxed">
+                  "This is a great continuation to The Corner Room Series. The story brings you deeper into a world that of book one. This second installment moves beyond the intrigue of the first book and shifts focus toward the realization that the true mystery was never the room itself, but the people within it. The Character development is strong and has a good steady pace for a mystery read."
+                </blockquote>
+                <footer className="text-sm font-medium text-gray-500">— Starr Blossem</footer>
+              </div>
+            </div>
+
             {/* Short Story Reviews */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="space-y-4">
@@ -180,23 +326,6 @@ export default function BooksPage() {
                   "From the starting to the end it was so nice and thrilling to read. Every character was nicely described. I enjoyed reading this story. Expecting another thriller from you!"
                 </blockquote>
                 <footer className="text-sm font-medium text-gray-500">— dilis2</footer>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <div className="flex text-yellow-400">
-                    {'★★★★★'.split('').map((star, i) => (
-                      <span key={i}>{star}</span>
-                    ))}
-                  </div>
-                  <span className="text-sm font-medium text-gray-600">Story Reader</span>
-                </div>
-                <blockquote className="text-gray-700 italic leading-relaxed">
-                  "What a clean finish up and completion... awesome thrilling story... I hate to watch thriller movies but loved to read ur story... write and keep writing VJ!"
-                </blockquote>
-                <footer className="text-sm font-medium text-gray-500">— shy</footer>
               </div>
             </div>
 
